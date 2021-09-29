@@ -2,6 +2,7 @@
 
 # from python std library
 import csv
+import datetime
 
 # python3 -m pip install np
 import numpy as np
@@ -48,10 +49,13 @@ def main():
     plt.yticks(np.arange(0, 81, 10))
     plt.legend((p1[0], p2[0]), ("LAN", "WAN"))
 
+    
+    isotime = datetime.datetime.now().isoformat()
+
     # SAVE the graph locally
-    plt.savefig("/home/student/mycode/graphing/2018summaryv2.png")
+    plt.savefig(f"/home/student/mycode/graphing/myGraph-{isotime}.png")
     # Save to "~/static"
-    plt.savefig("/home/student/static/2018summaryv2.png")       
+    plt.savefig(f"/home/student/static/myGraph-{isotime}.png")       
     print("Graph created.")
 
 if __name__ == "__main__":
