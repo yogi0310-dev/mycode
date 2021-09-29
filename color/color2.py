@@ -13,7 +13,9 @@ def main():
     print(crayons.red('red string'))
 
     # Red White and Blue text
-    print('{} white {}'.format(crayons.red('red'), crayons.blue('blue')))
+    print('{} white {}'.format(crayons.red('red'), crayons.blue('blue')))   # v2 - format string
+
+    print(f'{crayons.red("this is red")} white {crayons.blue("this is blue")}')  #v3 - fstring
 
     crayons.disable() # disables the crayons package
     print('{} white {}'.format(crayons.red('red'), crayons.blue('blue')))
@@ -36,7 +38,7 @@ def main():
     print(crayons.white('white string', bold=True))
     
     # print 'Yogesh Mhatre' in Red and Blue
-    print(crayons.red('Yogesh'), crayons.blue('Mhatre'))
+    print(crayons.yellow('Yogesh'), crayons.green('Mhatre', bold=True))
     
 # we must call our main function or our code will not run!
 main()
